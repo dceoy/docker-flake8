@@ -1,0 +1,12 @@
+---
+version: '3'
+
+services:
+  flake8:
+    container_name: flake8
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dceoy/flake8:latest
+    entrypoint:
+      - /usr/local/bin/flake8
